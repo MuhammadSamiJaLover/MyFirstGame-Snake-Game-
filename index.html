@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>SNAKE RECHARGED</h1>
+    
+    <!-- Top Bar Controls -->
+    <div class="controls-bar">
+      <div class="theme-selector">
+        <button class="btn theme-btn active" onclick="setTheme('volcano')">🌋 Volcano</button>
+        <button class="btn theme-btn" onclick="setTheme('nebula')">🌌 Nebula</button>
+        <button class="btn theme-btn" onclick="setTheme('cyber')">⚡ Cyber</button>
+      </div>
+      <button class="btn sound-btn" id="soundToggleBtn" onclick="toggleSound()">🔊 Sound: ON</button>
+    </div>
+
+    <!-- Mode Selector -->
+    <div class="mode-selector">
+      <button class="btn mode-btn active" onclick="setMode('CLASSIC')">Classic</button>
+      <button class="btn mode-btn" onclick="setMode('PASSTHROUGH')">Pass-Through</button>
+      <button class="btn mode-btn" onclick="setMode('MAZE')">Maze</button>
+    </div>
+
+    <div class="score-board">
+      <div>Score: <span id="score">0</span></div>
+      <div>High Score: <span id="highScore">0</span></div>
+    </div>
+    
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    
+    <!-- On-Screen Touch D-Pad Controls for Mobile -->
+    <div class="touch-controls">
+      <div class="dpad-row"><button class="dpad-btn" id="btnUp">▲</button></div>
+      <div class="dpad-row">
+        <button class="dpad-btn" id="btnLeft">◄</button>
+        <button class="dpad-btn" id="btnDown">▼</button>
+        <button class="dpad-btn" id="btnRight">►</button>
+      </div>
+    </div>
+
+    <div class="controls-hint">Use <b>Arrow Keys / WASD</b> or <b>Touch Buttons</b> to move | Press <b>Space</b> to restart</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
